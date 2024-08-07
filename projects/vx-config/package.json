@@ -1,0 +1,13 @@
+{
+	"name": "vx-config",
+	"version": "0.0.1",
+	"peerDependencies": {
+		"@angular/common": "^18.1.0",
+		"@angular/core": "^18.1.0",
+		"zod": "^3.23.8"
+	},
+	"dependencies": {
+		"tslib": "^2.3.0"
+	},
+	"sideEffects": false
+}

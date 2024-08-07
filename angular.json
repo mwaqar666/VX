@@ -1,0 +1,52 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "vx-config": {
+      "projectType": "library",
+      "root": "projects/vx-config",
+      "sourceRoot": "projects/vx-config/src",
+      "prefix": "vx-config",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/vx-config/ng-package.json"
+          },
+          "configurations": {
+            "dev": {
+              "tsConfig": "projects/vx-config/tsconfig.lib.dev.json"
+            },
+            "qa": {
+              "tsConfig": "projects/vx-config/tsconfig.lib.qa.json"
+            },
+            "uat": {
+              "tsConfig": "projects/vx-config/tsconfig.lib.json"
+            },
+            "prod": {
+              "tsConfig": "projects/vx-config/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "prod"
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/vx-config/**/*.ts",
+              "projects/vx-config/**/*.html"
+            ],
+            "eslintConfig": "projects/vx-config/eslint.config.js"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "737f16fb-a682-44dd-904b-30fa889fc632",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
+  }
+}

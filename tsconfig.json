@@ -1,0 +1,54 @@
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "outDir": "./dist/out-tsc",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "target": "ES2022",
+    "useDefineForClassFields": false,
+    "lib": [
+      "ES2022",
+      "DOM"
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./@types"
+    ],
+    "paths": {
+      "@vx/config/*": [
+        "./projects/vx-config/src/lib/*"
+      ],
+      "vx-config": [
+        "./dist/vx-config"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictMetadataEmit": true,
+    "strictInjectionParameters": true,
+    "strictTemplates": true,
+    "strictInputAccessModifiers": true
+  }
+}
